@@ -10,7 +10,7 @@
 </head>
 
 
-<body>
+<body class="min-vh-100">
 <div>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
