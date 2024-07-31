@@ -8,8 +8,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title>Document</title>
 </head>
-
-
 <body class="min-vh-100">
 <div>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -51,3 +49,15 @@
 </div>
 
 
+
+    @yield('content')
+
+
+
+
+</body>
+<footer class="bg-secondary text-white text-center py-3 mt-5 fixed-bottom">
+    <p>&copy; 2024 MonSiteWeb. Tous droits réservés.</p>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</html>

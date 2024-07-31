@@ -1,5 +1,7 @@
 
-@include('head')
+@extends ('layout');
+
+@section('content');
 
 <div class="m-5"><h1 class="text-center text-center">Fiche du produit {{$id}}</h1>
 </div>
@@ -33,6 +35,7 @@
     </div>
 </div>
 
+@endsection
 
 
 
