@@ -55,6 +55,7 @@
 
 
 
+
 </body>
 <footer class="bg-secondary text-white text-center py-3 mt-5 fixed-bottom">
     <p>&copy; 2024 MonSiteWeb. Tous droits réservés.</p>
