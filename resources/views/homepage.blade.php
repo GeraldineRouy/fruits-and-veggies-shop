@@ -2,9 +2,12 @@
 @section('content');
 
     <div>
-        <!-- Live as if you were to die tomorrow. Learn as if you were to live forever. - Mahatma Gandhi -->
 
+        <!-- Live as if you were to die tomorrow. Learn as if you were to live forever. - Mahatma Gandhi -->
         <body>
+
+
+
         @for ($i=0;$i<3;$i++)
             <h1><center>{{ $homeTitle }}</center></h1>
             <center>
