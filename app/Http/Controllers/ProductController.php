@@ -6,9 +6,10 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
+    public $productList = ["A", "B", "C"];
     public function index()
     {
-        return view("product-list", ["listTitle" => 'Liste des produits']);
+        return view("product-list", ["listTitle" => $this->productList]);
     }
 
     public function show(int $id)
