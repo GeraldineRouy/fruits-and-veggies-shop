@@ -10,15 +10,15 @@
         </div>
     </div>
     <div class="row mt-4">
-        @foreach ($catalog as $produits)
+        @foreach ($catalog as $products)
             <div class="col-md-4 mb-4">
                 <div class="card h-100">
-                    <h1 class="text-center">{{$produits->name}}</h1>
+                    <h1 class="text-center">{{$products->name}}</h1>
                     <p class="text-center text-muted">Browse our exclusive collection of products</p>
-                    <img src="https://via.placeholder.com/100" class="card-img-top" alt="Product Image">
+                    <img src="{{$products->productImage}}" class="card-img-top" alt="Product Image">
                     <div class="card-body">
-                        <h5 class="card-title">Product Name</h5>
-                        <p class="card-text">Brief description of the product.</p>
+                        <h5 class="card-title">Price : {{$products->price}}€</h5>
+                        <p class="card-text">{{$products->productDescription}}</p>
                         <a href="product/" class="btn btn-primary">View Details</a>
                     </div>
                 </div>
