@@ -19,7 +19,7 @@
         </div>
     </div>
     <div class="row mt-4">
-        @foreach ($listTitle as $products)
+        @foreach ($listTitle as $products => $id)
             <div class="col-md-4 mb-4">
                 <div class="card h-100">
                     <h1 class="text-center">{{$products}}</h1>
@@ -28,7 +28,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Product Name</h5>
                         <p class="card-text">Brief description of the product.</p>
-                        <a href="#" class="btn btn-primary">View Details</a>
+                        <a href="product/{{$products}}" class="btn btn-primary">View Details</a>
                     </div>
                 </div>
             </div>
