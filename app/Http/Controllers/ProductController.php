@@ -8,16 +8,23 @@ use App\Models\Product;
 
 class ProductController extends Controller
 {
-    public function index()
+    public function indexOrderedByName()
     {
-         $products = Product::all();
+         $products = Product::orderBy('name')->get();
+         return view("product-list", ["catalog" => $products]);
+    }
+    public function indexOrderedByPrice()
+    {
+         $products = Product::orderBy('price')->get();
          return view("product-list", ["catalog" => $products]);
     }
 
     public function show(int $id)
     {
-//        return view("product-details", ["id" => $id]);
-        $productsById = DB::select('select * from products WHERE id = :id', ['id' => $id]);
+
+        $productsById = Product::where('id',$id)->get();
         return view("product-details", ['productsById'=>$productsById]);
+
+
     }
 }

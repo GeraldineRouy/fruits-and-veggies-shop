@@ -1,10 +1,11 @@
 
-@extends ('layout');
+@extends ('layout')
 
-@section('content');
+@section('content')
 
 <div class="m-5"><h1 class="text-center text-center">Fiche du produit </h1>
 </div>
+
 
 @foreach($productsById as $product)
 
@@ -29,7 +30,12 @@
                             <li class="list-group-item">Origine : {{$product->origin}}</li>
                         </ul>
                     </div>
-                    <button type="button" class="btn btn-primary btn-lg mt-5">Ajouter au panier</button>
+                    @if($product->quantity > 0)
+                        <button type="button" class="btn btn-primary btn-lg mt-5">Ajouter au panier</button>
+
+                    @else
+                        <button type="button" class="btn btn-danger btn-lg mt-5" disabled>Rupture de stock !</button>
+                    @endif
                 </div>
             </div>
         </div>

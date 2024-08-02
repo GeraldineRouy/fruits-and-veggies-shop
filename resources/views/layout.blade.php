@@ -25,23 +25,13 @@
                     <li class="nav-item">
                         <a class="nav-link active fs-5" aria-current="page" href="{{'cart'}}">Cart</a>
                     </li>
+
                     <li class="nav-item">
-                        <a class="nav-link fs-5" href="{{'product'}}">Produit</a>
+                        <a class="nav-link fs-5" href="{{url("/product")}}">Produits par nom</a>
+                    </li><li class="nav-item">
+                        <a class="nav-link fs-5" href="{{url("/product-price")}}">Produits par prix</a>
                     </li>
-                    <li class="nav-item dropdown fs-5">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Dropdown
-                        </a>
-                        <ul class="dropdown-menu fs-5">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled fs-5" aria-disabled="true">Disabled</a>
-                    </li>
+
                 </ul>
                 <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">

@@ -17,7 +17,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Price : {{$product->price}}€</h5>
                             <p class="card-text">{{$product->productDescription}}</p>
-                            <a href="product/" class="btn btn-primary">View Details</a>
+                            <a href="product/{{$product->id}}" class="btn btn-primary">View Details</a>
                         </div>
                     </div>
                 </div>
