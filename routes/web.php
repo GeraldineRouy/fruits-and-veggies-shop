@@ -4,12 +4,21 @@ use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\HomeController;
 use \App\Http\Controllers\ProductController;
 use \App\Http\Controllers\CartController;
+use App\Http\Controllers\BackofficeController;
 
 Route::get('/', [HomeController::class, 'index']);
 Route::get('product', [ProductController::class, 'indexOrderedByName']);
 Route::get('product-price', [ProductController::class, 'indexOrderedByPrice']);
 Route::get('product/{id}', [ProductController::class, 'show']);
 Route::get('cart', [CartController::class,'index']);
+
+Route::get('backoffice', [BackofficeController::class, 'indexOrderedByName']);
+
+Route::get('backoffice/create-product',[BackofficeController::class, 'showProductCreation']);
+
+Route::get('backoffice/delete-product',[BackofficeController::class, 'showProductErasure']);
+
+Route::get('backoffice/edit-product', [BackofficeController::class, 'showProductEdition']);
 
 
 
