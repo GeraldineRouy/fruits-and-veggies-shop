@@ -17,7 +17,7 @@ Route::get('backoffice', [BackofficeController::class, 'indexOrderedByName']);
 Route::get('backoffice/create-product',[BackofficeController::class, 'create']);
 Route::post('/product', [BackofficeController::class, 'store']);
 
-Route::get('backoffice/delete-product',[BackofficeController::class, 'showProductErasure']);
+Route::delete('backoffice/delete-product/{id}',[BackofficeController::class, 'deleteProduct']);
 
 Route::get('backoffice/edit-product', [BackofficeController::class, 'showProductEdition']);
 

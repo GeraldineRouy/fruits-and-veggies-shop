@@ -20,8 +20,7 @@ class ProductController extends Controller
 
     public function show(int $id) :View
     {
-
-        $productsById = Product::find($id)->get();
+        $productsById = Product::find($id);
         return view("product-details", ['productsById'=>$productsById]);
 
 

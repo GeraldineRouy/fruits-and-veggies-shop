@@ -44,14 +44,12 @@ class BackofficeController extends Controller
         return redirect('/backoffice');
     }
 
-    public function showProductErasure() :View
-    {
-        return view('delete-product');
-    }
 
-    public function deleteProduct($productIdToDelete)
+    public function deleteProduct($id)
     {
-        $productIdToDelete = Product::destroy($productIdToDelete);
+        $productToDelete = Product::findOrFail($id);
+        $productToDelete->delete();
+        return redirect('/backoffice');
     }
 
     public function showProductEdition() :View
