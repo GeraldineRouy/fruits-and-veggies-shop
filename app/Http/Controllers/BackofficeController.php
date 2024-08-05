@@ -52,14 +52,31 @@ class BackofficeController extends Controller
         return redirect('/backoffice');
     }
 
-    public function showProductEdition() :View
+    public function showProductEdition(int $id) :View
     {
-        return view('edit-product');
+        $product = Product::find($id);
+        return view('edit-product', ['product'=>$product]);
     }
 
-    public function editProduct($product)
+    public function editProduct(Request $request,int $id)
     {
-        $product = Product::updateOrCreate();
+        $product = Product::find($id);
+
+        $product->update(
+            [
+                'name' => $request->input('productName'),
+                'price' => $request->input('productPrice'),
+                'productWeight' => $request->input('productWeight'),
+                'quantity' => $request->input('productQuantity'),
+                'productImage' => $request->input('productUrl'),
+                'productDescription' => $request->input('productDescription'),
+                'fruitOrVeggie' => $request->input('fruitOrVeggie'),
+                'organic' => $request->input('organic'),
+            ]
+        );
+
+
+        return redirect('/backoffice');
     }
 
 
