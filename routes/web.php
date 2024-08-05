@@ -14,7 +14,8 @@ Route::get('cart', [CartController::class,'index']);
 
 Route::get('backoffice', [BackofficeController::class, 'indexOrderedByName']);
 
-Route::get('backoffice/create-product',[BackofficeController::class, 'showProductCreation']);
+Route::get('backoffice/create-product',[BackofficeController::class, 'create']);
+Route::post('/product', [BackofficeController::class, 'store']);
 
 Route::get('backoffice/delete-product',[BackofficeController::class, 'showProductErasure']);
 

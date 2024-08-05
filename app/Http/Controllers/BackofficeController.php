@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use Illuminate\Http\Request;
 use Illuminate\View\View;
 
 class BackofficeController extends Controller
@@ -18,14 +19,29 @@ class BackofficeController extends Controller
         return view("backoffice", ["catalog" => $products]);
     }
 
-    public function showProductCreation() :View
+    public function create() :View
     {
         return view("create-product");
     }
 
-    public function createProduct($newProductName)
+
+    public function store(Request $request)
     {
-        $newProduct = Product::create(['name'=>$newProductName]);
+        $products = Product::orderBy('name')->get();
+
+            $product = [
+                'name' => $request->input('productName'),
+                'price' => $request->input('productPrice'),
+                'productWeight' => $request->input('productWeight'),
+                'quantity' => $request->input('productQuantity'),
+                'productImage' => $request->input('productUrl'),
+                'productDescription' => $request->input('productDescription'),
+                'fruitOrVeggie' => $request->input('fruitOrVeggie'),
+                'organic' => $request->input('organic'),
+            ];
+
+        $product = Product::create($product);
+        return redirect('/backoffice');
     }
 
     public function showProductErasure() :View

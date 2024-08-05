@@ -6,7 +6,7 @@
             <h2 class="panel-title">Formulaire Création d'un produit</h2>
         </div>
         <div class="panel-body">
-            <form class="" action="/user" method="post">
+            <form class="" action="/product" method="post">
                 {{ csrf_field() }}
                 <div class="form-group">
                     <label for="productName">Nom du produit</label>
@@ -23,7 +23,7 @@
                     <input type="text" class="form-control" name="productDescription" id="productDescription" placeholder="Courte description du produit">
                 </div>
                 <div class="form-group">
-                    <label for="fruitOrVeggie">Gender</label>
+                    <label for="fruitOrVeggie">Fruit ou légume?</label>
                     <select name="fruitOrVeggie" id="fruitOrVeggie" class="form-control">
                         <option value="fruit">fruit</option>
                         <option value="veggie">légume</option>
