@@ -3,11 +3,11 @@
 
 @section('content')
 
+{{--    @dd($productsById)--}}
+
 <div class="m-5"><h1 class="text-center text-center">Fiche du produit </h1>
 </div>
 
-
-@foreach($productsById as $product)
 
     <div class="container mt-6 ">
         <div class="row">
@@ -41,7 +41,7 @@
         </div>
     </div>
 
-@endforeach
+
 
 
 

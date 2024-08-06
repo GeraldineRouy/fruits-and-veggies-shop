@@ -27,7 +27,6 @@ class BackofficeController extends Controller
 
     public function store(Request $request)
     {
-        $products = Product::orderBy('name')->get();
 
             $product = [
                 'name' => $request->input('productName'),
@@ -40,7 +39,7 @@ class BackofficeController extends Controller
                 'organic' => $request->input('organic'),
             ];
 
-        $product = Product::create($product);
+       Product::create($product);
         return redirect('/backoffice');
     }
 
