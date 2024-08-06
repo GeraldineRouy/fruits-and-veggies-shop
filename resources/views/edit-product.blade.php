@@ -9,13 +9,22 @@
             @method('PUT')
             <div class="form-group">
                 <label for="productName">Nom du produit</label>
-                <input type="text" class="form-control" name="productName" id="productName" value="{{$product->name}}">
+                <input type="text" class="form-control @error('productName') is-invalid @enderror" name="productName" id="productName" value="{{$product->name}}">
+                @error('productName')
+                    <span class="fs-6 text-danger">{{$message}}</span><br>
+                @enderror
                 <label for="productPrice">Prix du produit</label>
-                <input type="text" class="form-control" name="productPrice" id="productPrice" value="{{$product->price}}">
+                <input type="text" class="form-control @error('productPrice') is-invalid @enderror" name="productPrice" id="productPrice" value="{{$product->price}}">
+                @error('productPrice')
+                <span class="fs-6 text-danger">{{$message}}</span><br>
+                @enderror
                 <label for="productWeight">Poids du produit</label>
                 <input type="text" class="form-control" name="productWeight" id="productWeight" value="{{$product->productWeight}}">
                 <label for="productQuantity">Stock du produit</label>
-                <input type="text" class="form-control" name="productQuantity" id="productQuantity" value="{{$product->quantity}}">
+                <input type="text" class="form-control @error('productQuantity') is-invalid @enderror" name="productQuantity" id="productQuantity" value="{{$product->quantity}}">
+                @error('productQuantity')
+                <span class="fs-6 text-danger">{{$message}}</span><br>
+                @enderror
                 <label for="productUrl">URL de l'image du produit</label>
                 <input type="text" class="form-control" name="productUrl" id="productUrl" value="{{$product->productImage}}">
                 <label for="productDescription">Description</label>

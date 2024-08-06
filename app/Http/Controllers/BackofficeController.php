@@ -28,12 +28,19 @@ class BackofficeController extends Controller
     public function store(Request $request)
     {
 
+        request()->validate([
+                'productName' => 'required|min:5|max:250',
+                'productQuantity' => 'required|numeric|min : 0',
+                'productPrice' => 'numeric|min : 0'
+            ]
+        );
+
             $product = [
                 'name' => $request->input('productName'),
                 'price' => $request->input('productPrice'),
                 'productWeight' => $request->input('productWeight'),
                 'quantity' => $request->input('productQuantity'),
-                'productImage' => $request->input('productUrl'),
+                'productImage' => $request->nput('productUrl'),
                 'productDescription' => $request->input('productDescription'),
                 'fruitOrVeggie' => $request->input('fruitOrVeggie'),
                 'organic' => $request->input('organic'),
@@ -53,13 +60,20 @@ class BackofficeController extends Controller
 
     public function showProductEdition(int $id) :View
     {
-        $product = Product::find($id);
+        $product = Product::findOrFail($id);
         return view('edit-product', ['product'=>$product]);
     }
 
     public function editProduct(Request $request,int $id)
     {
-        $product = Product::find($id);
+        request()->validate([
+                'productName' => 'required|min:5|max:250',
+                'productQuantity' => 'required|numeric|min : 0',
+                'productPrice' => 'numeric|min : 0'
+            ]
+        );
+
+        $product = Product::findOrFail($id);
 
         $product->update(
             [
