@@ -40,7 +40,7 @@ class BackofficeController extends Controller
                 'price' => $request->input('productPrice'),
                 'productWeight' => $request->input('productWeight'),
                 'quantity' => $request->input('productQuantity'),
-                'productImage' => $request->nput('productUrl'),
+                'productImage' => $request->input('productUrl'),
                 'productDescription' => $request->input('productDescription'),
                 'fruitOrVeggie' => $request->input('fruitOrVeggie'),
                 'organic' => $request->input('organic'),
