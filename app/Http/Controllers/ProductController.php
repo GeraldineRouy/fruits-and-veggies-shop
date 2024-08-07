@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Product;
 use Illuminate\View\View;
 
@@ -23,5 +24,12 @@ class ProductController extends Controller
         return view("product-details", ['product'=>Product::find($id)]);
 
 
+    }
+
+    public function findProductsFromCategory($id)
+    {
+        $products = Category::find($id)->products;
+
+        return view("productByCategory", ['catalog'=>$products]);
     }
 }

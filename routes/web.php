@@ -22,5 +22,7 @@ Route::delete('/backoffice/delete-product/{id}',[BackofficeController::class, 'd
 Route::get('/backoffice/edit-product/{id}', [BackofficeController::class, 'showProductEdition']);
 Route::put('/backoffice/edit-product/{id}', [BackofficeController::class, 'editProduct']);
 
+Route::get('/product-category/{id}', [ProductController::class, 'findProductsFromCategory']);
+
 
 
