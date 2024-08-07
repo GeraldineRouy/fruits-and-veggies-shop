@@ -5,6 +5,7 @@ use \App\Http\Controllers\HomeController;
 use \App\Http\Controllers\ProductController;
 use \App\Http\Controllers\CartController;
 use App\Http\Controllers\BackofficeController;
+use App\Http\Controllers\OrderController;
 
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/product', [ProductController::class, 'indexOrderedByName']);
@@ -23,6 +24,8 @@ Route::get('/backoffice/edit-product/{id}', [BackofficeController::class, 'showP
 Route::put('/backoffice/edit-product/{id}', [BackofficeController::class, 'editProduct']);
 
 Route::get('/product-category/{id}', [ProductController::class, 'findProductsFromCategory']);
+
+Route::get('/backoffice/orders', [OrderController::class, 'showAllOrders']);
 
 
 
