@@ -2,9 +2,14 @@
 @section('content')
 
     <div class="container mt-5">
-        <div class="row">
-            <div class="col text-center">
-                <h1 class="display-4 font-weight-bold">Product List</h1>
+        <div class="table-title">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h2>Gérer <b>Les Commandes</b></h2>
+                </div>
+                <div class="col-sm-6">
+                    <a href="{{url("backoffice/create-product")}}" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Ajouter une nouvelle commande</span></a>
+                </div>
             </div>
         </div>
         <div class="row mt-4">

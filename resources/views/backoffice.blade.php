@@ -9,10 +9,10 @@
                 <div class="table-title">
                     <div class="row">
                         <div class="col-sm-6">
-                            <h2>Manage <b>Products</b></h2>
+                            <h2>Gérer <b>Les Produits</b></h2>
                         </div>
                         <div class="col-sm-6">
-                            <a href="{{url("backoffice/create-product")}}" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New Product</span></a>
+                            <a href="{{url("backoffice/create-product")}}" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Ajouter un nouveau produit</span></a>
                         </div>
                     </div>
                 </div>

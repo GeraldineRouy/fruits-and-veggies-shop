@@ -31,6 +31,12 @@
                     </li><li class="nav-item">
                         <a class="nav-link fs-5" href="{{url("/product-price")}}">Produits par prix</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-5" href="{{url("/veggies")}}">Tous les légumes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-5" href="{{url("/fruits")}}">Tous les fruits</a>
+                    </li>
 
                 </ul>
                 <form class="d-flex" role="search">

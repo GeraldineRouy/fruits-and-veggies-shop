@@ -31,7 +31,7 @@
                         </ul>
                     </div>
                     @if($product->quantity > 0)
-                        <button type="button" class="btn btn-primary btn-lg mt-5">Ajouter au panier</button>
+                        <button type="button" class="btn btn-success btn-lg mt-5">Ajouter au panier</button>
 
                     @else
                         <button type="button" class="btn btn-danger btn-lg mt-5" disabled>Rupture de stock !</button>

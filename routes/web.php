@@ -27,5 +27,8 @@ Route::get('/product-category/{id}', [ProductController::class, 'findProductsFro
 
 Route::get('/backoffice/orders', [OrderController::class, 'showAllOrders']);
 
+Route::get('/veggies', [ProductController::class, 'showVeggies']);
+Route::get('/fruits', [ProductController::class, 'showFruits']);
+
 
 

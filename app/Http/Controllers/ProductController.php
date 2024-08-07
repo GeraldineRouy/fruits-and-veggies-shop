@@ -32,4 +32,16 @@ class ProductController extends Controller
 
         return view("productByCategory", ['catalog'=>$products]);
     }
+
+    public function showVeggies()
+    {
+        $products = Product::where('fruitOrVeggie', 'veggie')->get();
+        return view('displayVeggies', ['catalog' => $products]);
+    }
+
+    public function showFruits()
+    {
+        $products = Product::where('fruitOrVeggie', 'fruit')->get();
+        return view('displayFruits', ['catalog' => $products]);
+    }
 }
